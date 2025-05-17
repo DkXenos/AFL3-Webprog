@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Jason</title>
+<link rel="stylesheet" href="./style.css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        'dark-purple': '#2A2738',
+        'light-purple': '#B46EDD',
+        'medium-purple': '#8E5BB7',
+        'charcoal': '#1E1C25',
+      },
+      fontFamily: {
+        mono: ['JetBrains Mono', 'monospace'],
+      },
+    },
+  },
+};
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<style type="text/tailwindcss">
+@layer utilities {
+  .nav-btn {
+    @apply px-6 py-2 rounded-2xl text-white font-mono;
+  }
+  .nav-btn-active {
+    @apply bg-white bg-opacity-20;
+  }
+  .nav-btn-inactive {
+    @apply bg-transparent;
+  }
+}
+</style>
+</head>
+<body class="bg-dark-purple text-white font-mono">
+  <header class="w-full flex items-center justify-between px-8 py-4">
+   
+    <div class="flex items-center gap-4">
+      <button class="lg:hidden">
+        
+      </button>
+      <div class="w-12 h-12 bg-gray-300 rounded-full overflow-hidden">
+        <img src="Images/user-pfp.svg" alt="Profile Picture" class="w-full h-full object-cover relative top-1" />
+      </div>
+      <span class="text-xl font-semibold">Jason</span>
+    </div>
+
+
+    <nav class="hidden lg:flex items-center gap-2">
+      <button class="nav-btn nav-btn-inactive">
+        <a href="projects.html">Projects</a>
+      </button>
+      <button class="nav-btn nav-btn-active">
+        <a href="about.html">About me</a>
+      </button>
+      <button class="nav-btn nav-btn-inactive">
+        <a href="index.html">Home</a>
+      </button>
+    </nav>
+
+    <div class="flex items-center gap-4">
+      <button>
+        <a href="projects.html"><h1 class="text-3xl"><</h1></a>
+    </button>
+      <button>
+        <a href="index.html"><h1 class="text-3xl">></h1></a>
+      </button>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    
+      <div class="space-y-8">
+        <h1 class="text-5xl font-bold text-light-purple about-title">/about me</h1>
+        
+    
+        <div class="relative w-full max-w-md mx-auto profile-image">
+          <div class="rounded-3xl overflow-hidden aspect-square">
+            <img src="Images/pfp-web.jpeg" alt="pfp" class="w-full h-full object-cover" />
+          </div>
+          
+        
+          <div class="absolute inset-0 pointer-events-none overflow-hidden">
+            <svg viewBox="0 0 400 400" class="w-full h-full overflow-hidden">   
+              <line x1="0" y1="0" x2="400" y2="400" stroke="white" stroke-width="1" />
+              <line x1="400" y1="0" x2="0" y2="400" stroke="white" stroke-width="1" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+    
+      <div class="space-y-12">
+    
+        <div class="bg-charcoal bg-opacity-50 p-6 rounded-xl bio-section">
+          <p class="text-lg mb-4">
+            Nice to meet you, I'm Jason
+          </p>
+          <p class="text-gray-300 mb-4">
+            im currently a student at Ciputra University majoring on Informatics. Ive been learning programming since i got here and have been improving every single day
+          </p>
+          <p class="text-gray-300">
+            I focus on Video Editing and Web Development, while also working on my personal hobbies such as: Cooking, Music
+          </p>
+        </div>
+
+    
+        <div>
+          <h2 class="text-4xl font-bold text-light-purple mb-8 skills-title">/skills</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+            <div class="bg-charcoal rounded-lg overflow-hidden skills-card">
+              <div class="p-4 border-b border-gray-700">
+                <span class="text-gray-300 font-bold">Langguage</span>
+              </div>
+              <div class="p-6">
+                <p class="text-gray-300">
+                  Java, JavaScript, Python<br>
+                  HTML&CSS
+                </p>
+              </div>
+            </div>
+
+        
+            <div class="bg-charcoal rounded-lg overflow-hidden skills-card">
+              <div class="p-4 border-b border-gray-700">
+                <span class="text-gray-300 font-bold">Frameworks</span>
+              </div>
+              <div class="p-6">
+                <p class="text-gray-300">
+                  React js (learning)<br>
+                  Typescript (Plan to learn)
+                </p>
+              </div>
+            </div>
+
+        
+            <div class="bg-charcoal rounded-lg overflow-hidden skills-card">
+              <div class="p-4 border-b border-gray-700">
+                <span class="text-gray-300 font-bold">Tools</span>
+              </div>
+              <div class="p-6">
+                <p class="text-gray-300">
+                  Ae, Ps, Ai, Pr, Au, VsCode<br>
+                  NetBeans, Figma
+                </p>
+              </div>
+            </div>
+
+        
+            <div class="bg-charcoal rounded-lg overflow-hidden skills-card">
+              <div class="p-4 border-b border-gray-700">
+                <span class="text-gray-300 font-bold">Organization</span>
+              </div>
+              <div class="p-6">
+                <p class="text-gray-300">
+                  -Rektor Cup 2025-PDD<br>
+                  -NPLC 12th-PDD
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    
+        <div>
+          <h2 class="text-4xl font-bold text-light-purple mb-8 fun-facts-title">/fun-facts</h2>
+          
+          <div class="bg-charcoal rounded-lg overflow-hidden fun-facts-card">
+            <div class="p-6">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <p class="text-gray-300">I love shrimp</p>
+                  <p class="text-gray-300">Im allergic to shrimp</p>
+                  <p class="text-gray-300">I dont sleep</p>
+                </div>
+                <div>
+                  <p class="text-gray-300">i love to cook</p>
+                  <p class="text-gray-300">i love to learn</p>
+                  <p class="text-gray-300">i can play the piano</p>
+                  <p class="text-gray-300">i love to play games</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <div class="fixed right-0 top-1/2 h-screen w-px bg-white opacity-20 transform -translate-y-1/2"></div>
+  <div class="fixed right-1/4 top-0 h-px w-screen bg-white opacity-20"></div>
+  
+
+  <div class=" bottom-1/4 right-1/4 opacity-20 pointer-events-none">
+    <div class="grid grid-cols-3 gap-2">
+      <div class="w-2 h-2 rounded-full bg-white"></div>
+      <div class="w-2 h-2 rounded-full bg-white"></div>
+      <div class="w-2 h-2 rounded-full bg-white"></div>
+      <div class="w-2 h-2 rounded-full bg-white"></div>
+      <div class="w-2 h-2 rounded-full bg-white"></div>
+      <div class="w-2 h-2 rounded-full bg-white"></div>
+      <div class="w-2 h-2 rounded-full bg-white"></div>
+      <div class="w-2 h-2 rounded-full bg-white"></div>
+      <div class="w-2 h-2 rounded-full bg-white"></div>
+    </div>
+  </div>
+  
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    
+      gsap.set("header", { y: -100, opacity: 0 });
+      gsap.set(".about-title", { x: -100, opacity: 0 });
+      gsap.set(".profile-image", { scale: 0.8, opacity: 0 });
+      gsap.set(".bio-section", { y: 50, opacity: 0 });
+      gsap.set(".skills-title", { x: 100, opacity: 0 });
+      gsap.set(".skills-card", { y: 30, opacity: 0, stagger: 0.1 });
+      gsap.set(".fun-facts-title", { x: 100, opacity: 0 });
+      gsap.set(".fun-facts-card", { y: 30, opacity: 0 });
+      
+      const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+      
+      tl.to("header", { y: 0, opacity: 1, duration: 0.8 })
+        .to(".about-title", { x: 0, opacity: 1, duration: 0.6 }, "-=0.4")
+        .to(".profile-image", { scale: 1, opacity: 1, duration: 0.8 }, "-=0.3")
+        .to(".bio-section", { y: 0, opacity: 1, duration: 0.8 }, "-=0.5")
+        .to(".skills-title", { x: 0, opacity: 1, duration: 0.6 }, "-=0.4")
+        .to(".skills-card", { y: 0, opacity: 1, stagger: 0.1, duration: 0.6 }, "-=0.2")
+        .to(".fun-facts-title", { x: 0, opacity: 1, duration: 0.6 }, "-=0.2")
+        .to(".fun-facts-card", { y: 0, opacity: 1, duration: 0.8 }, "-=0.4");
+    });
+  </script>
+</body>
+</html>

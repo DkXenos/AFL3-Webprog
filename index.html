@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jason's Portfolio</title>
+  <link rel="stylesheet" href="./style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'dark-purple': '#2A2738',
+            'light-purple': '#B46EDD',
+            'medium-purple': '#8E5BB7',
+            'charcoal': '#1E1C25',
+          },
+          fontFamily: {
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+        },
+      },
+    };
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .nav-btn {
+        @apply px-6 py-2 rounded-2xl text-white font-mono;
+      }
+      .nav-btn-active {
+        @apply bg-white bg-opacity-20;
+      }
+      .nav-btn-inactive {
+        @apply bg-transparent;
+      }
+    }
+
+    .hidden-element {
+      opacity: 0;
+    }
+  </style>
+</head>
+<body class="bg-dark-purple text-white font-mono">
+  <header class="w-full flex items-center justify-between px-8 py-4 hidden-element" id="navbar">
+
+    <div class="flex items-center gap-4">
+      <button class="lg:hidden">
+       
+      </button>
+      <div class="w-12 h-12 bg-gray-300 rounded-full overflow-hidden">
+        <img src="Images/user-pfp.svg" alt="Profile Picture" class="w-full h-full object-cover relative top-1" />
+      </div>
+      <span class="text-xl font-semibold">Jason</span>
+    </div>
+
+    <nav class="hidden lg:flex items-center gap-2">
+    <button class="nav-btn nav-btn-inactive">
+        <a href="about.html">About me</a>
+    </button>
+      <button class="nav-btn nav-btn-active">
+        Home
+      </button>
+      <button class="nav-btn nav-btn-inactive">
+        <a href="projects.html">Projects</a>
+      </button>
+    </nav>
+
+
+    <div class="flex items-center gap-4">
+      <button>
+        <a href="about.html"><h1 class="text-3xl"><</h1></a>
+    </button>
+      <button>
+        <a href="projects.html"><h1 class="text-3xl">></h1></a>
+      </button>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-8">
+    <p class="flex justify-center items-center font-bold text-2xl pb-5 hidden-element" id="intro-text">My name is...</p>
+
+    <section class="flex flex-col lg:flex-row gap-8 mb-12">
+      
+  
+      <div class="bg-charcoal bg-opacity-50 rounded-3xl p-8 lg:w-2/3 text-center hidden-element" id="info-card">
+        <h1 class="text-5xl mb-2">
+          <span class="text-slate-50 font-bold text-6xl">Jason </span>
+          <span class="text-gray-400 text-3xl">, i am a </span>
+          <span class="text-light-purple">Video Editor</span>
+        </h1>
+        <h2 class="text-4xl mb-6">
+          <span class="text-gray-400 text-3xl">and </span>
+          <span class="text-light-purple">Web Designer</span>
+        </h2>
+        
+      <section class="mb-12">
+
+      <h3 class="text-2xl mb-6 border-b border-gray-600 pb-2 pt-10">About me</h3>
+      <div class="text-center text-gray-300 space-y-6">
+        <p class="about-text hidden-element">
+          Nice to meet you, I'm Jason
+        </p>
+        <p class="about-text hidden-element">
+          im currently a student at Ciputra University majoring on
+          Informatics. Ive been learning programming since i got
+          here and have been improving every single day
+        </p>
+        <p class="about-text hidden-element">
+          I focus on Video Editing and Web Development, while also
+          working on my personal Hobbies such as: Cooking, Music,
+          Working out.
+        </p>
+        <p class="about-text hidden-element">
+          My projects are not limited to Web Design, but others are
+          currently "Work in Progress"
+        </p>
+      </div>
+    </section>
+      </div>
+
+  
+      <div class="lg:w-1/3 hidden-element" id="profile-image">
+        <div class="rounded-3xl overflow-hidden relative">
+          <img src="Images/pfp-web.jpeg" alt="Jason" class="w-full h-full object-cover" />
+      
+          <div class="absolute right-0 bottom-0">
+            <div class="w-12 h-px bg-white"></div>
+            <div class="w-px h-12 bg-white absolute bottom-0 right-0"></div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+
+    
+<section class="hidden-element" id="contacts-section">
+      <h3 class="text-2xl mb-6 border-b border-gray-600 pb-2">Contacts</h3>
+      <div class="flex flex-col lg:flex-row justify-between">
+        <div class="lg:w-1/2 text-center lg:text-left text-gray-300 mb-6 mr-10 lg:mb-0">
+          <p>
+            If you are interested on working with me 
+          </p>
+          
+          <p>please dont hesitate to contact me.</p>
+        </div>
+        <div class="lg:w-1/2 space-y-4 lg:text-center"> 
+          <div class="flex items-center gap-2 lg:justify-end contact-item hidden-element"> 
+            <img src="Images/insta-gray.svg" alt="Insta" class="h-6 w-6 text-gray-400" />
+            <span>@jayysnt</span>
+          </div>
+          <div class="flex items-center gap-2 lg:justify-end contact-item hidden-element"> 
+            <img src="Images/gmail-gray.svg" alt="Gmail" class="h-6 w-6 text-gray-400" />
+            <span>superjason101010@gmail.com</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="mt-12 flex justify-center gap-4 hidden-element" id="footer">
+      <a href="https://github.com/DkXenos" class="text-gray-400 hover:text-white">
+        <img src="Images/github-gray.svg" alt="" class="h-6 w-6 text-gray-400" />
+      </a>
+      <a href="https://www.linkedin.com/in/jason-tio-6b3662255/" class="text-gray-400 hover:text-white">
+        <img src="Images/linkedin-icon.svg" alt="" class="h-6 w-6 text-gray-400" >
+      </a>
+      <a href="https://www.instagram.com/jayysnt?igsh=MnMyNHB5ajI0M2M3" class="text-gray-400 hover:text-white">
+        <img src="Images/insta-gray.svg" alt="Insta" class="h-6 w-6 text-gray-400" />
+      </a>
+      <a href="#" class="text-gray-400 hover:text-white">
+        <img src="Images/gmail-gray.svg" alt="Gmail" class="h-6 w-6 text-gray-400" />
+      </a>
+    </footer>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+      gsap.registerPlugin(ScrollTrigger);
+      
+
+      gsap.fromTo('#navbar', 
+        { y: -100, opacity: 0 }, 
+        { y: 0, opacity: 1, duration: 1, ease: "power3.out", delay: 0.2 }
+      );
+      
+
+      gsap.fromTo('#intro-text', 
+        { opacity: 0 }, 
+        { opacity: 1, duration: 1, delay: 0.5, ease: "power2.inOut" }
+      );
+      
+
+      gsap.fromTo('#info-card', 
+        { x: -100, opacity: 0 }, 
+        { x: 0, opacity: 1, duration: 1, ease: "back.out(1.2)", delay: 0.7 }
+      );
+      
+
+      gsap.fromTo('#profile-image', 
+        { x: 100, opacity: 0 }, 
+        { x: 0, opacity: 1, duration: 1, ease: "back.out(1.2)", delay: 0.9 }
+      );
+      
+
+      gsap.fromTo('.about-text', 
+        { y: 30, opacity: 0 }, 
+        { y: 0, opacity: 1, duration: 0.8, stagger: 0.2, ease: "power2.out", delay: 1.2 }
+      );
+      
+
+      gsap.fromTo('#contacts-section', 
+        { y: 50, opacity: 0 }, 
+        { y: 0, opacity: 1, duration: 1, ease: "power3.out", 
+          scrollTrigger: {
+            trigger: '#contacts-section',
+            start: "top bottom-=100",
+            toggleActions: "play none none none"
+          }
+        }
+      );
+      
+
+      gsap.fromTo('.contact-item', 
+        { x: 50, opacity: 0 }, 
+        { x: 0, opacity: 1, duration: 0.6, stagger: 0.2, ease: "power2.out",
+          scrollTrigger: {
+            trigger: '.contact-item',
+            start: "top bottom-=50",
+            toggleActions: "play none none none"
+          }
+        }
+      );
+      
+  
+      gsap.fromTo('#footer', 
+        { y: 30, opacity: 0 }, 
+        { y: 0, opacity: 1, duration: 1, ease: "power2.out", 
+          scrollTrigger: {
+            trigger: '#footer',
+            start: "top bottom-=20",
+            toggleActions: "play none none none"
+          }
+        }
+      );
+    });
+  </script>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
